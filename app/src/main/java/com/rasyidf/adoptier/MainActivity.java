@@ -16,15 +16,16 @@ public class MainActivity extends AppCompatActivity {
     CheckBox ckRemember;
     EditText edEmail, edPass;
     String email, password;
-    String success = getResources().getString(R.string.loginSuccess);
-    String wrongEmail = getResources().getString(R.string.loginInvalidEmail);
-    String wrongPass = getResources().getString(R.string.loginInvalidPass);
-    String wrongCreds = getResources().getString(R.string.loginInvalidCreds);
-    String tmpmsg;
+    String success, wrongEmail , wrongPass ,wrongCreds, tmpmsg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        success = getResources().getString(R.string.loginSuccess);
+        wrongEmail = getResources().getString(R.string.loginInvalidEmail);
+        wrongPass = getResources().getString(R.string.loginInvalidPass);
+        wrongCreds = getResources().getString(R.string.loginInvalidCreds);
 
         btnLogin = findViewById(R.id.btLogin);
         edEmail = findViewById(R.id.edEmail);
@@ -35,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
             String userPass = "1234";
             email = edEmail.getText().toString();
             password = edPass.getText().toString();
-            Boolean userRight = (email == userEmail);
-            Boolean passRight = (password == userPass);
+            Boolean userRight = (email.equals(userEmail));
+            Boolean passRight = (password.equals(userPass));
 
             if (userRight && passRight){
                 tmpmsg = success;
