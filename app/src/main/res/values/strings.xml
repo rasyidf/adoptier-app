@@ -6,4 +6,8 @@
     <string name="register">Register</string>
     <string name="remember">Remember Me</string>
     <string name="no_account">Don\'t have an account?</string>
+    <string name="loginSuccess">Login Sukses</string>
+    <string name="loginInvalidEmail">Email Salah</string>
+    <string name="loginInvalidPass">Password Salah</string>
+    <string name="loginInvalidCreds">Email dan Password Salah</string>
 </resources>

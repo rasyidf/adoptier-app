@@ -16,6 +16,11 @@ public class MainActivity extends AppCompatActivity {
     CheckBox ckRemember;
     EditText edEmail, edPass;
     String email, password;
+    String success = getResources().getString(R.string.loginSuccess);
+    String wrongEmail = getResources().getString(R.string.loginInvalidEmail);
+    String wrongPass = getResources().getString(R.string.loginInvalidPass);
+    String wrongCreds = getResources().getString(R.string.loginInvalidCreds);
+    String tmpmsg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,10 +31,24 @@ public class MainActivity extends AppCompatActivity {
         edPass = findViewById(R.id.edPass);
         ckRemember = findViewById(R.id.ckRemember);
         btnLogin.setOnClickListener(view -> {
+            String userEmail = "admin@mail.com";
+            String userPass = "1234";
             email = edEmail.getText().toString();
             password = edPass.getText().toString();
+            Boolean userRight = (email == userEmail);
+            Boolean passRight = (password == userPass);
 
-            Toast t = Toast.makeText(getApplicationContext(), "email anda " + email + ", dan password anda : "+ password, Toast.LENGTH_LONG);
+            if (userRight && passRight){
+                tmpmsg = success;
+            } else {
+                tmpmsg = wrongCreds;
+                if (userRight)
+                    tmpmsg = wrongPass;
+
+                if (passRight)
+                    tmpmsg = wrongEmail;
+            }
+            Toast t = Toast.makeText(getApplicationContext(), tmpmsg, Toast.LENGTH_LONG);
             t.show();
 
         });
