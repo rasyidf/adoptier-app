@@ -1,6 +1,7 @@
 package com.rasyidf.adoptier;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,8 +13,8 @@ import android.widget.Toast;
 import android.widget.EditText;
 
 
-public class MainActivity extends AppCompatActivity {
-    Button btnLogin;
+public class LoginActivity extends AppCompatActivity {
+    Button btnLogin, btnRegister;
     CheckBox ckRemember;
     EditText edEmail, edPass;
     Boolean remembered;
@@ -21,20 +22,29 @@ public class MainActivity extends AppCompatActivity {
     String success, wrongEmail , wrongPass ,wrongCreds, tmpmsg;
     String userEmail = "admin@mail.com";
     String userPass = "1234";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         success = getResources().getString(R.string.loginSuccess);
         wrongEmail = getResources().getString(R.string.loginInvalidEmail);
         wrongPass = getResources().getString(R.string.loginInvalidPass);
         wrongCreds = getResources().getString(R.string.loginInvalidCreds);
 
+        btnRegister = findViewById(R.id.btnRegister);
         btnLogin = findViewById(R.id.btLogin);
         edEmail = findViewById(R.id.edEmail);
         edPass = findViewById(R.id.edPass);
         ckRemember = findViewById(R.id.ckRemember);
+
+        btnRegister.setOnClickListener(view -> {
+            Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
+            startActivity(i);
+        });
+
         btnLogin.setOnClickListener(view -> {
             remembered = ckRemember.isChecked();
             email = edEmail.getText().toString();
@@ -66,5 +76,28 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    public void showPopup(View view) {
+            PopupMenu popup = new PopupMenu(this, view);
+
+        // This activity implements OnMenuItemClickListener
+        popup.setOnMenuItemClickListener( item -> {
+            switch (item.getItemId()){
+                case R.id.mnDaftar:
+                    Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
+                    startActivity(i);
+
+                    return true;
+                case R.id.Lupa:
+                    Toast.makeText(getApplicationContext(), "@string/tryRemember", Toast.LENGTH_LONG).show();
+
+                    return true;
+                default:
+                    return false;
+            }
+        });
+        popup.inflate(R.menu.login_menu);
+        popup.show();
+    }
 
 }

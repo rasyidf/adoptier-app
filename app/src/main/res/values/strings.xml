@@ -4,6 +4,8 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
+    <string name="forgot">Forgot Password</string>
+    <string name="tryRemember">Coba diingat lagi</string>
     <string name="remember">Remember Me</string>
     <string name="no_account">Don\'t have an account?</string>
     <string name="loginSuccess">Login Sukses</string>
@@ -19,4 +21,12 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="passwordRe">Retype Password</string>
+    <string name="have_account">Already have an account?</string>
 </resources>

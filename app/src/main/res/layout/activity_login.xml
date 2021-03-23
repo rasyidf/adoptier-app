@@ -4,7 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
+
+    <Button
+        android:id="@+id/menupop"
+        android:layout_width="54dp"
+        android:layout_height="38dp"
+        android:background="#FFFFFF"
+        android:onClick="showPopup"
+        app:icon="@android:drawable/ic_menu_sort_by_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtLogo"
