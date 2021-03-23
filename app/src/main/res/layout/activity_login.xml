@@ -8,11 +8,13 @@
 
     <Button
         android:id="@+id/menupop"
-        android:layout_width="54dp"
-        android:layout_height="38dp"
+        style="@style/Widget.FluentUI.Button.Outlined"
+        android:layout_width="43dp"
+        android:layout_height="33dp"
         android:background="#FFFFFF"
         android:onClick="showPopup"
-        app:icon="@android:drawable/ic_menu_sort_by_size"
+        app:icon="@drawable/ic_fluent_badge_24_regular"
+        app:iconPadding="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
