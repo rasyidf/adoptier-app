@@ -1,8 +1,5 @@
-﻿﻿<h1 align="center">uWriter</h1>
- 
-<div align="center">
-  <strong>Adoptier</strong>
-</div>
+﻿﻿<h1 align="center">Adoptier</h1>
+  
 <div align="center">
   Adoption App Companion 
 </div>
@@ -30,7 +27,7 @@
 </div>
 
 ## Table of Contents
-- [Features](#features)
+- [Layout](#layout)
 - [Philosophy](#philosophy)
 - [Support](#support)
 
