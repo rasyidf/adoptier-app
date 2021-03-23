@@ -34,16 +34,16 @@
 ## Layout
 
 ### Login
-[Login](docs/Login.png)
+![Login](docs/Login.png)
 
 ### Register
-[Register](docs/Register.png)
+![Register](docs/Register.png)
 
 ### Menu
-[Menu](docs/LoginMenu.png)
+![Menu](docs/LoginMenu.png)
 
 ### Home
-[Home](docs/Home.png)
+![Home](docs/Home.png)
 
 ## Philosophy
 
