@@ -13,12 +13,13 @@ import android.widget.Toast;
 public class RegisterActivity extends AppCompatActivity {
 
     EditText edEmail, edPass, edPassRe;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        edEmail  = findViewById(R.id.edEmail);
-        edPass   = findViewById(R.id.edPass);
+        edEmail = findViewById(R.id.edEmail);
+        edPass = findViewById(R.id.edPass);
         edPassRe = findViewById(R.id.edPassRe);
     }
 
@@ -28,19 +29,16 @@ public class RegisterActivity extends AppCompatActivity {
         String pass = edPass.getText().toString();
         String passre = edPassRe.getText().toString();
 
-        if (email.isEmpty()){
+        if (email.isEmpty()) {
             edEmail.setError("You must add email");
             Notify("You must add email");
-        }
-        else if(pass.isEmpty()){
+        } else if (pass.isEmpty()) {
             edPass.setError("You must specify password");
-        }
-        else if(passre.isEmpty()) {
+        } else if (passre.isEmpty()) {
             edPassRe.setError("Enter your confirmation password");
-        } else if (!pass.equals(passre))
-        {
+        } else if (!pass.equals(passre)) {
             edPassRe.setError("The password must same, please check again");
-        }else {
+        } else {
             Intent i = new Intent(getApplicationContext(), LoginActivity.class);
             startActivity(i);
             Notify("Account Created! Login using you credentials");

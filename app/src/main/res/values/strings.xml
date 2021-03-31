@@ -9,6 +9,7 @@
     <string name="remember">Remember Me</string>
     <string name="no_account">Don\'t have an account?</string>
     <string name="loginSuccess">Login Sukses</string>
+    <string name="Success">Sukses</string>
     <string name="loginInvalidEmail">Email Salah</string>
     <string name="loginInvalidPass">Password Salah</string>
     <string name="loginInvalidCreds">Email dan Password Salah</string>
@@ -29,4 +30,12 @@
     <string name="hello_world">Hello Square World!</string>
     <string name="passwordRe">Retype Password</string>
     <string name="have_account">Already have an account?</string>
+    <string name="lihatdata">Lihat Data</string>
+    <string name="editdata">Edit Data</string>
+    <string name="datakontak">Data Kontak</string>
+    <string name="namaitem">Nama Item</string>
+    <string name="detailkontak">Detail Kontak</string>
+    <string name="nama">Nama</string>
+    <string name="notel">Nomor Telepon</string>
+    <string name="back">Kembali</string>
 </resources>

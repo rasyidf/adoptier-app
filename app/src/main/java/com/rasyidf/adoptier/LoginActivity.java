@@ -19,8 +19,8 @@ public class LoginActivity extends AppCompatActivity {
     EditText edEmail, edPass;
     Boolean remembered;
     String email, password;
-    String success, wrongEmail , wrongPass ,wrongCreds, tmpmsg;
-    String userEmail = "admin@mail.com";
+    String success, wrongEmail, wrongPass, wrongCreds, tmpmsg;
+    String userEmail = "admin";
     String userPass = "1234";
 
 
@@ -53,13 +53,13 @@ public class LoginActivity extends AppCompatActivity {
             Boolean userRight = (email.equals(userEmail));
             Boolean passRight = (password.equals(userPass));
 
-            if (userRight && passRight){
+            if (userRight && passRight) {
                 tmpmsg = success;
                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putBoolean("remembered" , remembered);
-                bundle.putString("email" , email);
-                bundle.putString("pass" , password);
+                bundle.putBoolean("remembered", remembered);
+                bundle.putString("email", email);
+                bundle.putString("pass", password);
                 intent.putExtras(bundle);
                 startActivity(intent); // TODO : this
             } else {
@@ -78,11 +78,11 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public void showPopup(View view) {
-            PopupMenu popup = new PopupMenu(this, view);
+        PopupMenu popup = new PopupMenu(this, view);
 
         // This activity implements OnMenuItemClickListener
-        popup.setOnMenuItemClickListener( item -> {
-            switch (item.getItemId()){
+        popup.setOnMenuItemClickListener(item -> {
+            switch (item.getItemId()) {
                 case R.id.mnDaftar:
                     Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
                     startActivity(i);
